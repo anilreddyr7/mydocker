@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN mkdir -p /usr/shell
-RUN echo $id
+RUN userid="$(id)" && echo $userid
 COPY . /usr/shell
 RUN useradd -u 1001 webuser
 RUN groupadd -g 20990 oeusrgrp
